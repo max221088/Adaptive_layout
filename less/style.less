@@ -1,0 +1,209 @@
+// out: ../css/style.css
+
+* {
+	padding: 0px;
+	margin: 0px;
+	border: none;
+}
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+
+:focus,
+:active {
+	outline: none;
+}
+
+a:focus,
+a:active {
+	outline: none;
+}
+
+a, a:link, a:visited  {
+    text-decoration: none;
+}
+
+a:hover  {
+    text-decoration: none;
+}
+aside, nav, footer, header, section, main {
+	display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-size: 14px;
+}
+
+ul, ul li {
+	list-style: none;
+}
+
+header{
+    width: 100%;
+
+    .container{
+        background-color: #04223a;
+        display: flex;
+        align-items: center;
+        height: 30px;
+
+        .wrapper{
+            width: 1200px;
+            margin: 0 auto;
+    
+            .contact-link{
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                .adress-link{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    .adress{
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        .icon{
+                            width: 13px;
+                            height: 13px;
+                            margin-right: 5px;
+                        }
+                        .title-adress{
+                            color: rgb(204, 204, 204);
+                            margin-right: 15px;
+                            font-size: 12px;
+                        }
+                    }
+                }
+                .social-link{
+                    .icon-social{
+                        width: 15px;
+                        height: 15px;
+                        margin-right: 7px;
+                    }
+                }
+            }
+        }
+    }
+    .main_section{
+        width: 100%;
+        .wrapper{
+            width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            .logo{
+                padding-top: 30px;
+                padding-bottom: 30px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                img{
+                    width: 50px;
+                    height: auto;
+                    margin-right: 10px;
+                }
+                .logo_title{
+                    font-size: 32px;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: #585858;
+                }
+            }
+    
+            .menu_item{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                li{
+                    margin-right: 20px;
+                    font-weight: bold;
+                    font-family: Arial, Helvetica, sans-serif;
+                    color: #585858;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}
+
+main{
+    .title{
+
+        .container{
+            position: relative;
+            width: 100%;
+            height: 300px;
+            background-color: #304d64;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+                .bg{
+                    position: absolute;
+                    top: 0;
+                    bottom: 0;
+                    left: 0;
+                    right: 0;
+                    background-position: center;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                    z-index: 1;
+                    opacity: 0.6;
+                }
+            .content{
+                position: relative;
+                z-index: 2;
+
+                h1{
+                    text-transform: uppercase;
+                    color: #fff;
+                    line-height: 1.7;
+                    font-size: 42px;
+                    font-family: Arial, Helvetica, sans-serif;
+                    margin-bottom: 10px;
+
+                }
+                p{
+                    text-align: center;
+                    color: #fff;
+                    font-size: 32px;
+                    font-family: Arial, Helvetica, sans-serif;
+
+                }
+                .butn{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                    .btn{
+                        width: 120px;
+                        height: 40px;
+                        border-radius: 5px;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        font-weight: bold;
+                        margin-top: 30px;
+                    }
+                    .left{
+                        background-color: #11a285;
+                        margin-right: 10px;
+                        color: #fff;
+                    }
+                    .right{
+                        background-color: #fffef9;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+        }
+    }
+}
