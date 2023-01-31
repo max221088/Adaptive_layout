@@ -55,7 +55,7 @@ header .container {
   height: 30px;
 }
 header .container .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 header .container .wrapper .contact-link {
@@ -92,7 +92,7 @@ header .main_section {
   width: 100%;
 }
 header .main_section .wrapper {
-  width: 1200px;
+  max-width: 1200px;
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -192,4 +192,59 @@ main .title .container .content .butn .left {
 main .title .container .content .butn .right {
   background-color: #fffef9;
   margin-left: 10px;
+}
+main .card_mein {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+main .card_mein .title_section_card {
+  font-size: 48px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 50px;
+}
+main .card_mein .title_section_card h3 {
+  font-size: 42px;
+  color: #585858;
+}
+main .card_mein .title_section_card .line {
+  height: 5px;
+  background-color: #585858;
+  width: 80px;
+  margin: 0 auto;
+}
+main .card_mein .card_container {
+  margin: 50px -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .card_mein .card_container .card {
+  width: 33.3333%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-color: #04223a;
+}
+main .card_mein .card_container .card .card_image {
+  width: 100%;
+  height: auto;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+main .card_mein .card_container .card .card_content {
+  background-color: #04223a;
+  color: #d6d6d6;
+  padding: 20px;
+}
+main .card_mein .card_container .card .card_content .card_title {
+  margin-bottom: 10px;
+  text-transform: capitalize;
+  font-size: 24px;
+}
+main .card_mein .card_container .card .card_content .card_text {
+  font-size: 14px;
 }
