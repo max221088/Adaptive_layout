@@ -46,16 +46,18 @@ header{
 
     .container{
         background-color: #04223a;
-        display: flex;
-        align-items: center;
         height: 30px;
 
         .wrapper{
             max-width: 1200px;
+            height: 100%;
             margin: 0 auto;
+            display: flex;
+            align-items: center;
     
             .contact-link{
                 display: flex;
+                width: 100%;
                 align-items: center;
                 justify-content: space-between;
                 .adress-link{
@@ -79,6 +81,9 @@ header{
                     }
                 }
                 .social-link{
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
                     .icon-social{
                         width: 15px;
                         height: 15px;
@@ -91,6 +96,7 @@ header{
     .main_section{
         width: 100%;
         .wrapper{
+            position: relative;
             max-width: 1200px;
             margin: 0 auto;
             display: flex;
@@ -98,6 +104,7 @@ header{
             justify-content: space-between;
             .logo{
                 padding-top: 30px;
+                padding-left: 20px;
                 padding-bottom: 30px;
                 display: flex;
                 justify-content: center;
@@ -120,6 +127,7 @@ header{
                 align-items: center;
                 justify-content: center;
 
+
                 li{
                     margin-right: 20px;
                     font-weight: bold;
@@ -127,6 +135,54 @@ header{
                     color: #585858;
                     cursor: pointer;
                 }
+            }
+            .menu-minimal{
+                height: 50px;
+                width: 50px;
+                margin-right: 50px;
+                background-position: center;
+                background-size: cover;
+                visibility: hidden;
+                display: none ;
+                &:hover{
+                    background-color: #10967b;
+                    border-radius: 0px 15px ;
+                }
+                &.active_btn{
+                    background-color: #11a285;
+                    border-radius: 0px 15px ;
+                }
+
+            }
+            .menu_item_mini{
+                position: absolute;
+                top: 80px;
+                right: 30px;
+                display: none;
+                width: auto;
+                margin-right: 20px;
+                font-weight: bold;
+                font-family: Arial, Helvetica, sans-serif;
+                color: #585858;
+                cursor: pointer;
+                background-color: #11a285;
+                border-radius: 15px 0px 15px 15px;
+                padding: 15px;
+                z-index: 3;
+                visibility: hidden;
+            
+                li{
+                    color: #04223a;
+
+                    &:hover{
+                        color: #000000;
+                        text-decoration: underline;
+                    }
+                }
+            }
+            .active{
+                visibility: visible;
+                display: block ;
             }
         }
     }
@@ -160,7 +216,7 @@ main{
                 position: relative;
                 z-index: 2;
 
-                h1{
+                .front_title{
                     text-transform: uppercase;
                     color: #fff;
                     line-height: 1.7;
@@ -209,6 +265,7 @@ main{
     .card_mein{
         max-width: 1200px;
         margin: 0 auto;
+
         .title_section_card{
             font-size: 48px;
             margin: 0 auto;
@@ -227,8 +284,10 @@ main{
             }
         }
         .card_container{
-            margin: 50px -20px;
+            margin-top: 50px;
+            margin-bottom: 50px;
             display: flex;
+            flex-wrap: wrap;
             justify-content: center;
             align-items: center;
 
@@ -237,9 +296,8 @@ main{
                 display: flex;
                 flex-direction: column;
                 justify-content: space-between;
-                margin-left: 20px;
-                margin-right: 20px;
-                background-color: #04223a;
+                padding: 20px;
+
                 .card_image{
                     width: 100%;
                     height: auto;
@@ -250,6 +308,7 @@ main{
                 .card_content{
                     background-color: #04223a;
                     color: rgb(214, 214, 214);
+                    background-color: #04223a;
                     padding: 20px;
                     .card_title{
                        margin-bottom: 10px;
@@ -262,5 +321,46 @@ main{
                 }
             }
         }
+    }
+}
+
+/* md */
+@media (max-width: 1200px) {
+    header .main_section .wrapper .menu-minimal {
+        visibility: hidden;
+        display: none ;
+    }
+    .menu_item{
+        visibility: visible;
+        display: block ;
+    }
+    main .card_mein .card_container .card{
+        width: 40%;
+    }
+}
+/* sm */
+@media (max-width: 900px) {
+    header .main_section .wrapper .menu-minimal {
+        visibility: visible;
+        display: block ;
+    }
+    header .main_section .wrapper .menu_item{
+        visibility: hidden;
+        display: none ;
+        width: 0px;
+    }
+    main .card_mein .card_container .card{
+        width: 50%;
+    }
+    
+}
+/* xs */
+@media (max-width: 600px) {
+    main .card_mein .card_container .card{
+        width: 80%;
+        margin-bottom: 20px;
+    }
+    main .title .container .content .front_title{
+        font-size: 36px;
     }
 }

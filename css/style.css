@@ -50,16 +50,18 @@ header {
 }
 header .container {
   background-color: #04223a;
-  display: flex;
-  align-items: center;
   height: 30px;
 }
 header .container .wrapper {
   max-width: 1200px;
+  height: 100%;
   margin: 0 auto;
+  display: flex;
+  align-items: center;
 }
 header .container .wrapper .contact-link {
   display: flex;
+  width: 100%;
   align-items: center;
   justify-content: space-between;
 }
@@ -83,6 +85,11 @@ header .container .wrapper .contact-link .adress-link .adress .title-adress {
   margin-right: 15px;
   font-size: 12px;
 }
+header .container .wrapper .contact-link .social-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 header .container .wrapper .contact-link .social-link .icon-social {
   width: 15px;
   height: 15px;
@@ -92,6 +99,7 @@ header .main_section {
   width: 100%;
 }
 header .main_section .wrapper {
+  position: relative;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
@@ -100,6 +108,7 @@ header .main_section .wrapper {
 }
 header .main_section .wrapper .logo {
   padding-top: 30px;
+  padding-left: 20px;
   padding-bottom: 30px;
   display: flex;
   justify-content: center;
@@ -128,6 +137,51 @@ header .main_section .wrapper .menu_item li {
   color: #585858;
   cursor: pointer;
 }
+header .main_section .wrapper .menu-minimal {
+  height: 50px;
+  width: 50px;
+  margin-right: 50px;
+  background-position: center;
+  background-size: cover;
+  visibility: hidden;
+  display: none ;
+}
+header .main_section .wrapper .menu-minimal:hover {
+  background-color: #10967b;
+  border-radius: 0px 15px ;
+}
+header .main_section .wrapper .menu-minimal.active_btn {
+  background-color: #11a285;
+  border-radius: 0px 15px ;
+}
+header .main_section .wrapper .menu_item_mini {
+  position: absolute;
+  top: 80px;
+  right: 30px;
+  display: none;
+  width: auto;
+  margin-right: 20px;
+  font-weight: bold;
+  font-family: Arial, Helvetica, sans-serif;
+  color: #585858;
+  cursor: pointer;
+  background-color: #11a285;
+  border-radius: 15px 0px 15px 15px;
+  padding: 15px;
+  z-index: 3;
+  visibility: hidden;
+}
+header .main_section .wrapper .menu_item_mini li {
+  color: #04223a;
+}
+header .main_section .wrapper .menu_item_mini li:hover {
+  color: #000000;
+  text-decoration: underline;
+}
+header .main_section .wrapper .active {
+  visibility: visible;
+  display: block ;
+}
 main .title .container {
   position: relative;
   width: 100%;
@@ -153,7 +207,7 @@ main .title .container .content {
   position: relative;
   z-index: 2;
 }
-main .title .container .content h1 {
+main .title .container .content .front_title {
   text-transform: uppercase;
   color: #fff;
   line-height: 1.7;
@@ -214,8 +268,10 @@ main .card_mein .title_section_card .line {
   margin: 0 auto;
 }
 main .card_mein .card_container {
-  margin: 50px -20px;
+  margin-top: 50px;
+  margin-bottom: 50px;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
@@ -224,9 +280,7 @@ main .card_mein .card_container .card {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  margin-left: 20px;
-  margin-right: 20px;
-  background-color: #04223a;
+  padding: 20px;
 }
 main .card_mein .card_container .card .card_image {
   width: 100%;
@@ -236,8 +290,8 @@ main .card_mein .card_container .card .card_image {
   background-repeat: no-repeat;
 }
 main .card_mein .card_container .card .card_content {
-  background-color: #04223a;
   color: #d6d6d6;
+  background-color: #04223a;
   padding: 20px;
 }
 main .card_mein .card_container .card .card_content .card_title {
@@ -247,4 +301,43 @@ main .card_mein .card_container .card .card_content .card_title {
 }
 main .card_mein .card_container .card .card_content .card_text {
   font-size: 14px;
+}
+/* md */
+@media (max-width: 1200px) {
+  header .main_section .wrapper .menu-minimal {
+    visibility: hidden;
+    display: none ;
+  }
+  .menu_item {
+    visibility: visible;
+    display: block ;
+  }
+  main .card_mein .card_container .card {
+    width: 40%;
+  }
+}
+/* sm */
+@media (max-width: 900px) {
+  header .main_section .wrapper .menu-minimal {
+    visibility: visible;
+    display: block ;
+  }
+  header .main_section .wrapper .menu_item {
+    visibility: hidden;
+    display: none ;
+    width: 0px;
+  }
+  main .card_mein .card_container .card {
+    width: 50%;
+  }
+}
+/* xs */
+@media (max-width: 600px) {
+  main .card_mein .card_container .card {
+    width: 80%;
+    margin-bottom: 20px;
+  }
+  main .title .container .content .front_title {
+    font-size: 36px;
+  }
 }
